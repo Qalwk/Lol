@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Logo } from "../public/Logo.svg"
+import Logo from "../public/images/Logo.svg"
 import Congratulations from './Congratulations.tsx'
 import './App.css'
 
