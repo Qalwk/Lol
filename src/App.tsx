@@ -64,7 +64,7 @@ function App() {
       ) : null}
 
       <div className='Confeti'>
-        <img className='' src="src\assets\конфети.png" alt="blue" />
+        <img className='' src="src/assets/конфети.png" alt="blue" />
       </div>
       <a style={{position:'absolute', zIndex:'20', color:'red'}}>{isStart}</a>
       <div className='Logo'>
