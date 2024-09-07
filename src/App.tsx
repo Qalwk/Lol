@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Logo from "./assets/Logo.svg"
+// import Logo from "../public/"
 import Congratulations from './Congratulations.tsx'
 import './App.css'
 
@@ -65,35 +65,35 @@ function App() {
       ) : null}
 
       <div className='Confeti'>
-        <img className='' src="src/assets/конфети.png" alt="blue" />
+        <img className='' src="images/конфети.png" alt="blue" />
       </div>
       <a style={{position:'absolute', zIndex:'20', color:'red'}}>{isStart}</a>
       <div className='Logo'>
-        <img className='' src={Logo} alt="blue" />
+        <img className='' src="/images/Logo.svg" alt="blue" />
       </div>
       <a className='text'>Spin the whell of fortune</a>
 
       <div className='wheel'>
-        <img className='wheel-red' src="src\assets\Wheel-red.png" alt="" />
-        <img className='wheel-btn' onClick={handleClick} src="src\assets\Wheel-btn.png" alt="" />
-        <img className='wheel-gold' src="src\assets\Wheel-gold.png" alt="" />
-        <img className='wheel-win' src="src\assets\Wheel-win.png" alt="" />
+        <img className='wheel-red' src="/images/Wheel-red.png" alt="" />
+        <img className='wheel-btn' onClick={handleClick} src="/images/Wheel-btn.png" alt="" />
+        <img className='wheel-gold' src="/images/Wheel-gold.png" alt="" />
+        <img className='wheel-win' src="/images/Wheel-win.png" alt="" />
       </div>
 
       <div className='cards'>
-        <img className='' src="src\assets\Cards.png" alt="blue" />
+        <img className='' src="/images/Cards.png" alt="blue" />
       </div>
       <div className='women'>
-        <img className='' src="src\assets\Women.png" alt="blue" />
+        <img className='' src="/images/Women.png" alt="blue" />
       </div>
       <div className='blue'>
-        <img className='' src="src\assets\777.png" alt="blue" />
+        <img className='' src="/images/777.png" alt="blue" />
       </div>
       <div className='table'>
-        <img className='' src="src\assets\Red_table.png" alt="table" />
+        <img className='' src="/images/Red_table.png" alt="table" />
       </div>
       <div className='bg'>
-        <img className='bg-img' src="src\assets\BG.png" alt="bg" />
+        <img className='bg-img' src="/images/BG.png" alt="bg" />
       </div>
     </div>
   )

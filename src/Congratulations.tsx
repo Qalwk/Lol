@@ -18,13 +18,13 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
         (
             <div className="Cong-bg">
                 <div className='Cong-cards'>
-                    <img className='' src="src\assets\Cards.png" alt="blue" />
+                    <img className='' src="/images/Cards.png" alt="blue" />
                 </div>
                 <div className='Cong-money'>
-                    <img className='' src="src/assets/Money.png" alt="blue" />
+                    <img className='' src="/images/Money.png" alt="blue" />
                 </div>
                 <div className='Cong-coin'>
-                    <img className='' src="src/assets/Coin.png" alt="blue" />
+                    <img className='' src="/images/Coin.png" alt="blue" />
                 </div>
                 <div className="Congratulations">
                     <span className="Cong-title">CONGRATULATIONS</span>
