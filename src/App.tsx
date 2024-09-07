@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import Logo from "../public/"
+import Logo from "/images/Logo.svg"
 import Congratulations from './Congratulations.tsx'
 import './App.css'
 
@@ -69,7 +69,7 @@ function App() {
       </div>
       <a style={{position:'absolute', zIndex:'20', color:'red'}}>{isStart}</a>
       <div className='Logo'>
-        <img className='' src="/images/Logo.svg" alt="blue" />
+        <img className='' src={Logo} alt="blue" />
       </div>
       <a className='text'>Spin the whell of fortune</a>
 

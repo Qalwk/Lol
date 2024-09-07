@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import Cards from "/images/Cards.png"
 import "./Congratulations.css"
 
 interface TextProps {
@@ -18,7 +19,7 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
         (
             <div className="Cong-bg">
                 <div className='Cong-cards'>
-                    <img className='' src="/images/Cards.png" alt="blue" />
+                    <img className='' src={Cards} alt="blue" />
                 </div>
                 <div className='Cong-money'>
                     <img className='' src="/images/Money.png" alt="blue" />
