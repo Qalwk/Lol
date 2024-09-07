@@ -1,5 +1,7 @@
 import { useState } from "react"
-import Cards from "../public/Cards.png"
+import Cards from "/Cards.png"
+import Money from "/Money.png"
+import Coin from "/Coin.png"
 import "./Congratulations.css"
 
 interface TextProps {
@@ -22,10 +24,10 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
                     <img className='' src={Cards} alt="blue" />
                 </div>
                 <div className='Cong-money'>
-                    <img className='' src="/images/Money.png" alt="blue" />
+                    <img className='' src={Money} alt="blue" />
                 </div>
                 <div className='Cong-coin'>
-                    <img className='' src="/images/Coin.png" alt="blue" />
+                    <img className='' src={Coin} alt="blue" />
                 </div>
                 <div className="Congratulations">
                     <span className="Cong-title">CONGRATULATIONS</span>
