@@ -68,7 +68,7 @@ function App() {
       </div>
       <a style={{position:'absolute', zIndex:'20', color:'red'}}>{isStart}</a>
       <div className='Logo'>
-        <img className='' src="src\assets\Logo.svg" alt="blue" />
+        <img className='' src="src/assets/Logo.svg" alt="blue" />
       </div>
       <a className='text'>Spin the whell of fortune</a>
 
