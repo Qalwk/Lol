@@ -8,7 +8,7 @@ function App() {
   const [isSpinning, setIsSpinning] = useState(false);
 
   const handleClick = () => {
-    if (!isSpinning && isOpen == 0) {
+    if (!isSpinning && isOpen == 0 && isStart < 2) {
       setStart(isStart + 1);
       setIsSpinning(true);
 
@@ -24,22 +24,22 @@ function App() {
         setOpen(1); // Открываем экран выигрыша
       }, 10000); // 10 секунд - продолжительность анимации
     }
-    // if (!isSpinning && isOpen == 1) {
-    //   setStart(isStart + 2);
-    //   setIsSpinning(true);
+    if (!isSpinning && isOpen == 1 && isStart < 2) {
+      setStart(isStart + 1);
+      setIsSpinning(true);
 
-    //   // Запускаем анимацию вращения
-    //   const wheelWin = document.querySelector('.wheel-win') as HTMLElement; 
-    //   wheelWin.style.animation = 'spin 10s cubic-bezier(0.4, 0, 0.2, 1) forwards'; 
+      // Запускаем анимацию вращения
+      const wheelWin = document.querySelector('.wheel-win') as HTMLElement; 
+      wheelWin.style.animation = 'spin2 10s cubic-bezier(0.4, 0, 0.2, 1) forwards'; 
 
-    //   // Устанавливаем таймер, чтобы анимация остановилась на 1980 градусах
-    //   setTimeout(() => {
-    //     wheelWin.style.animation = ''; // Останавливаем анимацию
-    //     wheelWin.style.transform = 'translateX(-50%) rotate(1980deg)'; //  Поворачиваем на 1980 градусов
-    //     setIsSpinning(false);
-    //     setOpen(1); // Открываем экран выигрыша
-    //   }, 10000); // 10 секунд - продолжительность анимации
-    // }
+      // Устанавливаем таймер, чтобы анимация остановилась на 1980 градусах
+      setTimeout(() => {
+        wheelWin.style.animation = ''; // Останавливаем анимацию
+        wheelWin.style.transform = 'translateX(-50%) rotate(1980deg)'; //  Поворачиваем на 1980 градусов
+        setIsSpinning(false);
+        setOpen(2); // Открываем экран выигрыша
+      }, 10000); // 10 секунд - продолжительность анимации
+    }
   };
 
 
@@ -50,7 +50,16 @@ function App() {
           <a style={{position:'absolute', zIndex:'20', color:'red', top: '20px'}}>{isStart}</a>
           <a style={{position:'absolute', zIndex:'20', color:'red', right: '20px'}}>{isStart}</a>
           <a style={{position:'absolute', zIndex:'20', color:'red', bottom: '20px'}}>{isStart}</a>
-          <Congratulations/>
+          <Congratulations text='150 FREE SPIN'/>
+        </div>
+      ) : null}
+
+      {isOpen === 2 ? (
+        <div className=''>
+          <a style={{position:'absolute', zIndex:'20', color:'red', top: '20px'}}>{isStart}</a>
+          <a style={{position:'absolute', zIndex:'20', color:'red', right: '20px'}}>{isStart}</a>
+          <a style={{position:'absolute', zIndex:'20', color:'red', bottom: '20px'}}>{isStart}</a>
+          <Congratulations text='1500 EUR + 150FS'/>
         </div>
       ) : null}
 

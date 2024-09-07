@@ -66,6 +66,12 @@
 @keyframes spin {
   0% { transform: translateX(-50%) rotate(0deg); }
   /* 50% { transform: translateX(-50%) rotate(300deg); } */
+  100% { transform: translateX(-50%) rotate(1800deg); }  /* Поворот на 1980 градусов в конце анимации */
+}
+
+@keyframes spin2 {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  /* 50% { transform: translateX(-50%) rotate(300deg); } */
   100% { transform: translateX(-50%) rotate(1980deg); }  /* Поворот на 1980 градусов в конце анимации */
 }
 
@@ -94,6 +100,9 @@
 }
 
 .text {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
   top: 85px;
   position: absolute;
   font-size: 64px;
