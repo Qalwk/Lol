@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Logo from "/Logo.svg"
+import BG from "/BG.png"
 import Congratulations from './Congratulations.tsx'
 import './App.css'
 
@@ -93,7 +94,7 @@ function App() {
         <img className='' src="/images/Red_table.png" alt="table" />
       </div>
       <div className='bg'>
-        <img className='bg-img' src="/images/BG.png" alt="bg" />
+        <img className='bg-img' src={BG} alt="bg" />
       </div>
     </div>
   )

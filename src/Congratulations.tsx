@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Cards from "/images/Cards.png"
+import Cards from "../public/Cards.png"
 import "./Congratulations.css"
 
 interface TextProps {
