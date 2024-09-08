@@ -12,6 +12,7 @@ import Table from "/Red_table.png"
 import Logo from "/Logo.svg"
 import BG from "/BG.png"
 import Congratulations from './Congratulations.tsx'
+import Moneys from "/Moneys.png"
 import './App.css'
 
 function App() {
@@ -105,6 +106,9 @@ function App() {
       </div>
       <div className='bg'>
         <img className='bg-img' src={BG} alt="bg" />
+      </div>
+      <div className='moneys'>
+        <img src={Moneys} alt="" />
       </div>
     </div>
   )

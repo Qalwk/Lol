@@ -19,30 +19,32 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
       <div>
         {isOpen === 0 ? 
         (
-            <div className="Cong-bg">
-                <div className='Cong-cards'>
-                    <img className='' src={Cards} alt="blue" />
+            <div className="LOL">
+                <div className="Cong-bg">
+                    <div className='Cong-cards'>
+                        <img className='' src={Cards} alt="blue" />
+                    </div>
+                    <div className='Cong-money'>
+                        <img className='' src={Money} alt="blue" />
+                    </div>
+                    <div className='Cong-coin'>
+                        <img className='' src={Coin} alt="blue" />
+                    </div>
+                    <div className="Congratulations">
+                        <span className="Cong-title">CONGRATULATIONS</span>
+                        <div className="Cong-win">
+                            <span className="Cong-text">
+                                YOU WIN
+                            </span>
+                            <span className="Cong-text2">
+                                {text}
+                            </span>
+                        </div>
+                        <button className="Cong-btn">
+                            <span className="Cong-btn-text" onClick={handleClick}>CONTINUE</span> 
+                        </button>
+                    </div>
                 </div>
-                <div className='Cong-money'>
-                    <img className='' src={Money} alt="blue" />
-                </div>
-                <div className='Cong-coin'>
-                    <img className='' src={Coin} alt="blue" />
-                </div>
-                <div className="Congratulations">
-                    <span className="Cong-title">CONGRATULATIONS</span>
-                <div className="Cong-win">
-                <span className="Cong-text">
-                    YOU WIN
-                </span>
-                <span className="Cong-text2">
-                    {text}
-                </span>
-                </div>
-                <button className="Cong-btn">
-                    <span className="Cong-btn-text" onClick={handleClick}>CONTINUE</span> 
-                </button>
-            </div>
             </div>
             )
             :

@@ -33,13 +33,6 @@
     border-radius: 9px;
 }
 
-.Cong-title {
-    font-family: Gilroy;
-    font-size: 48px;
-    font-weight: 600;
-    color: #FFFFFF;
-}
-
 .Cong-btn-text {
     top: 48px;
     font-family: Gilroy;
@@ -57,13 +50,17 @@
     transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
 }
 
-.Cong-text {
-    left: calc(50% - 410px/2 - 11px);
-    top: 444px;
+.Cong-title {
+    font-family: Gilroy;
+    font-size: 48px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
 
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 800;
+.Cong-text {
+
+    font-family: Gilroy;
+    font-weight: 600;
     font-size: 64px;
     line-height: 60px;
 
@@ -74,13 +71,11 @@
 }
 
 .Cong-text2 {
-    left: calc(50% - 410px/2 - 11px);
-    top: 444px;
     text-wrap: nowrap;
 
-    font-family: 'Gilroy';
+    font-family: Gilroy;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 64px;
     line-height: 60px;
 
@@ -93,15 +88,12 @@
 .Cong-bg {
     /* Rectangle 9865 */
     z-index: 20;
-
-    position: absolute;
+    position: fixed;
     width: 100dvw;
     height: 100dvh;
     left: 0px;
     top: 0px;
-
-background: rgba(0, 0, 0, 0.75);
-
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .Cong-cards {
@@ -129,4 +121,85 @@ background: rgba(0, 0, 0, 0.75);
     transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
     z-index: 150;
     animation: Table 4s ease-in-out infinite;
+}
+
+@media  (min-width: 720px) and (max-width: 1440px) {
+.Cong-bg {
+
+}
+.Cong-cards {
+    top: 30px;
+    left: 20%; 
+    scale: 90%;
+}
+.Cong-money {
+    top: 350px;
+    left: 74%; 
+    scale: 80%;
+}
+.Cong-coin {
+    top: 80px;
+    left: 74%;
+    scale: 90%;
+}
+}
+
+@media  screen and (max-width: 720px) {
+    .Cong-title {
+        font-size: 24px;
+        padding-left: -40px;
+    }
+    .Cong-win { 
+        top: 80px;
+    }
+    .Cong-text {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 30px;
+    }
+    .Cong-text2 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 60px;
+    }
+    .Cong-btn {
+        /* height: 110px; */
+        height: 52px;
+        width: 240px;
+        top: 170px;
+    }
+    .Cong-btn-text {
+        font-size: 32px;
+        line-height: 30px;
+    }
+    .Congratulations {
+        padding: 0px;
+        padding-top: 40px;
+        top: 32dvh;
+        height: 280px;
+        width: 300px;
+        left: 50dvw; /*  Устанавливаем значение left на 50% */
+        transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+    }
+    .Cong-bg {
+
+    }
+    .Cong-cards {
+        position: fixed;
+        top: 8dvh;
+        left: 1dvw; 
+        scale: 40%;
+    }
+    .Cong-money {
+        top: 40dvh;
+        left: 53dvw; 
+        scale: 50%;
+    }
+    .Cong-coin {
+        top: 23dvh;
+        left: 72dvw; /*  Устанавливаем значение left на 50% */
+        transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+        right: 100px;
+        scale: 60%;
+    }
 }
