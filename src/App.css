@@ -87,6 +87,7 @@
 }
 
 .text {
+  font-family: "Lilita One", sans-serif;
   text-wrap: nowrap; 
   font-style: normal;
   font-weight: 800;
@@ -193,7 +194,7 @@
     display: none;
   }
   .women {
-    bottom: -85dvh;
+    bottom: -100dvh;
     scale: 65%;
     left: 60%; /*  Устанавливаем значение left на 50% */
   }
