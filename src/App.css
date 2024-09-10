@@ -194,9 +194,9 @@
     display: none;
   }
   .women {
-    bottom: -100dvh;
+    bottom: -100vh;
     scale: 65%;
-    left: 60%; /*  Устанавливаем значение left на 50% */
+    left: 60%;
   }
   .cards {
     display: none;
@@ -243,6 +243,12 @@
   position: fixed;
   left: 0%; /*  Устанавливаем значение left на 50% */
   bottom: 0;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    .women {
+      left: 30%;
+    }
   }
 }
 

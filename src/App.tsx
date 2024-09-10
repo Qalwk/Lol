@@ -72,13 +72,13 @@ function App() {
   return (
     <div className="main">
       {isOpen === 1 ? (
-        <div className="">
+        <div className="pop-up_text">
           <Congratulations text="150 FREE SPIN" />
         </div>
       ) : null}
 
       {isOpen === 2 ? (
-        <div className="">
+        <div className="pop-up_text">
           <Congratulations
             text={
               countryCode === "CA" ? "2170 CAD + 150FS" : "1500 EUR + 150FS"
