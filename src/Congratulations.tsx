@@ -17,7 +17,7 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
   useEffect(() => {
     const textElement = document.querySelector(".Cong-text2") as HTMLElement;
     if (textElement) {
-      textElement.style.wordBreak = "break-all";
+      textElement.style.wordBreak = "keep-all";
     }
   }, []);
 

@@ -175,7 +175,7 @@
         width: 300px;
         left: 50dvw; /*  Устанавливаем значение left на 50% */
         transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
-    }
+    } 
     .Cong-cards {
         position: fixed;
         top: 8dvh;

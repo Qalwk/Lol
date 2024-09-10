@@ -196,7 +196,7 @@
   .women {
     bottom: -100vh;
     scale: 65%;
-    left: calc(100% - 324px);
+    left: calc(100% - 284px);
   }
   .cards {
     display: none;
@@ -243,6 +243,14 @@
   position: fixed;
   left: 0%; /*  Устанавливаем значение left на 50% */
   bottom: 0;
+  }
+
+  @media screen and (max-height: 750px) {
+    .women {
+      bottom: -30vh;
+      scale: 60%;
+      left: calc(100% - 224px);
+    }
   }
 }
 
