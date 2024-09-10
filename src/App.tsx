@@ -1,25 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import Confeti from "/конфети.png"
-import WheelRed from "/Wheel-red.png"
-import WheelBtn from "/Wheel-btn.png"
-import WheelGold from "/Wheel-gold.png"
-import WheelWin from "/Wheel-win.png"
-import WheelWinCA from "/Wheel-winCA.png"
-import Cards from "/Cards.png"
-import Women from "/Women.png"
-import Blue from "/777.png"
-import Table from "/Red_table.png"
-import Logo from "/Logo.svg"
-import BG from "/BG.png"
-import Congratulations from './Congratulations.tsx'
-import Moneys from "/Moneys.png"
-import './App.css'
+import Confeti from "/конфети.png";
+import WheelRed from "/Wheel-red.png";
+import WheelBtn from "/Wheel-btn.png";
+import WheelGold from "/Wheel-gold.png";
+import WheelWin from "/Wheel-win.png";
+import WheelWinCA from "/Wheel-winCA.png";
+import Cards from "/Cards.png";
+import Women from "/Women.png";
+import Blue from "/777.png";
+import Table from "/Red_table.png";
+import Logo from "/Logo.svg";
+import BG from "/BG.png";
+import Congratulations from "./Congratulations.tsx";
+import Moneys from "/Moneys.png";
+import "./App.css";
 
 function App() {
   const [isStart, setStart] = useState(0);
   const [isOpen, setOpen] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
+  const [countryCode, setCountryCode] = useState("");
 
   const handleClick = () => {
     if (!isSpinning && isOpen == 0 && isStart < 2) {
@@ -27,13 +28,14 @@ function App() {
       setIsSpinning(true);
 
       // Запускаем анимацию вращения
-      const wheelWin = document.querySelector('.wheel-win') as HTMLElement; 
-      wheelWin.style.animation = 'spin 8s cubic-bezier(0.4, 0, 0.2, 1) forwards'; 
+      const wheelWin = document.querySelector(".wheel-win") as HTMLElement;
+      wheelWin.style.animation =
+        "spin 8s cubic-bezier(0.4, 0, 0.2, 1) forwards";
 
       // Устанавливаем таймер, чтобы анимация остановилась на 1980 градусах
       setTimeout(() => {
-        wheelWin.style.animation = ''; // Останавливаем анимацию
-        wheelWin.style.transform = 'translateX(-50%)' ; //  Поворачиваем на 1980 градусов
+        wheelWin.style.animation = ""; // Останавливаем анимацию
+        wheelWin.style.transform = "translateX(-50%)"; //  Поворачиваем на 1980 градусов
         setIsSpinning(false);
         setOpen(1); // Открываем экран выигрыша
       }, 10000); // 10 секунд - продолжительность анимации
@@ -43,95 +45,94 @@ function App() {
       setIsSpinning(true);
 
       // Запускаем анимацию вращения
-      const wheelWin = document.querySelector('.wheel-win') as HTMLElement; 
-      wheelWin.style.animation = 'spin2 10s cubic-bezier(0.4, 0, 0.2, 1) forwards'; 
+      const wheelWin = document.querySelector(".wheel-win") as HTMLElement;
+      wheelWin.style.animation =
+        "spin2 10s cubic-bezier(0.4, 0, 0.2, 1) forwards";
 
       // Устанавливаем таймер, чтобы анимация остановилась на 1980 градусах
       setTimeout(() => {
-        wheelWin.style.animation = ''; // Останавливаем анимацию
-        wheelWin.style.transform = 'translateX(-50%) rotate(1980deg)'; //  Поворачиваем на 1980 градусов
+        wheelWin.style.animation = ""; // Останавливаем анимацию
+        wheelWin.style.transform = "translateX(-50%) rotate(1980deg)"; //  Поворачиваем на 1980 градусов
         setIsSpinning(false);
         setOpen(2); // Открываем экран выигрыша
       }, 10000); // 10 секунд - продолжительность анимации
     }
   };
 
-  // fetch('https://ipapi.co/json/')
-  // .then(res => res.json())
-  // .then(data => {
-  //   if (data.country === 'CA') {
-  //     // Пользователь находится в Канаде
-  //     var country = "CA"
-  //   }
-  // })
-  // .catch(err => {
-  //   console.error('Ошибка при получении IP-адреса:', err);
-  // });
+  useEffect(() => {
+    async function fetchCountryCode() {
+      const res = await fetch("http://ip-api.com/json/?fields=61439"); // Поменяй IP-адрес тут или будет браться стандартный
+      const data = await res.json();
+      setCountryCode(data.countryCode);
+    }
 
-  // return isCanada ? <div id="canada-element">Канада</div> : null;
+    fetchCountryCode();
+  }, []);
 
   return (
-    
-    <div className='main'>
+    <div className="main">
       {isOpen === 1 ? (
-        <div className=''>
-          {/* <a style={{position:'absolute', zIndex:'20', color:'red', top: '20px'}}>{isStart}</a>
-          <a style={{position:'absolute', zIndex:'20', color:'red', right: '20px'}}>{isStart}</a>
-          <a style={{position:'absolute', zIndex:'20', color:'red', bottom: '20px'}}>{isStart}</a> */}
-          <Congratulations text='150 FREE SPIN'/>
+        <div className="">
+          <Congratulations text="150 FREE SPIN" />
         </div>
       ) : null}
 
       {isOpen === 2 ? (
-        <div className=''>
-          {/* <a style={{position:'absolute', zIndex:'20', color:'red', top: '20px'}}>{isStart}</a>
-          <a style={{position:'absolute', zIndex:'20', color:'red', right: '20px'}}>{isStart}</a>
-          <a style={{position:'absolute', zIndex:'20', color:'red', bottom: '20px'}}>{isStart}</a> */}
-          <Congratulations text='1500 EUR + 150FS'/>
+        <div className="">
+          <Congratulations
+            text={
+              countryCode === "CA" ? "2170 CAD + 150FS" : "1500 EUR + 150FS"
+            }
+          />
         </div>
       ) : null}
 
-      <div className='Confeti'>
-        <img className='' src={Confeti} alt="blue" />
+      <div className="Confeti">
+        <img className="" src={Confeti} alt="blue" />
       </div>
-      {/* <a style={{position:'absolute', zIndex:'20', color:'red'}}>{isStart}</a> */}
-      <div className='Logo'>
-        <img className='' src={Logo} alt="blue" />
+      <div className="Logo">
+        <img className="" src={Logo} alt="blue" />
       </div>
-      <a className='text'>Spin the whell of fortune</a>
+      <a className="text">Spin the whell of fortune</a>
 
-      <div className='wheel'>
-        <img className='wheel-red' src={WheelRed} alt="" />
-        <img className='wheel-btn' src={WheelBtn} onClick={handleClick} alt="" />
-        <img className='wheel-gold'src={WheelGold} alt="" />
-        <img className='wheel-win' src={WheelWinCA} alt="" />
-        {/* {(country === 'CA') ? (
-        <img className='wheel-win' src={WheelWinCA} alt="" />
-      ) 
-      : 
-      <img className='wheel-win' src={WheelWin} alt="" />} */}
+      <div className="wheel-fix">
+        <div className="wheel">
+          <img className="wheel-red" src={WheelRed} alt="" />
+          <img
+            className="wheel-btn"
+            src={WheelBtn}
+            onClick={handleClick}
+            alt=""
+          />
+          <img className="wheel-gold" src={WheelGold} alt="" />
+          {countryCode === "CA" ? (
+            <img className="wheel-win" src={WheelWinCA} alt="" />
+          ) : (
+            <img className="wheel-win" src={WheelWin} alt="" />
+          )}
+        </div>
       </div>
 
-      <div className='cards'>
-        <img className='' src={Cards} alt="blue" />
+      <div className="cards">
+        <img className="" src={Cards} alt="blue" />
       </div>
-      <div className='women'>
-        <img className='' src={Women} alt="blue" />
+      <div className="women">
+        <img className="" src={Women} alt="blue" />
       </div>
-      <div className='blue'>
-        <img className='' src={Blue} alt="blue" />
+      <div className="blue">
+        <img className="" src={Blue} alt="blue" />
       </div>
-      <div className='table'>
-        <img className='' src={Table} alt="table" />
+      <div className="table">
+        <img className="" src={Table} alt="table" />
       </div>
-      <div className='bg'>
-        <img className='bg-img' src={BG} alt="bg" />
+      <div className="bg">
+        <img className="bg-img" src={BG} alt="bg" />
       </div>
-      <div className='moneys'>
+      <div className="moneys">
         <img src={Moneys} alt="" />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

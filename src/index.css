@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Gilroy";
   src:
-    url("public/fonts/Gilroy-Light.otf") format("otf"),
-    url("public/fonts/Gilroy-ExtraBold.otf") format("otf");
+    url("../public/fonts/Gilroy-ExtraBold.otf") format("otf"),
+    url("../public/fonts/Gilroy-Light.otf") format("otf"),
 }
 
 :root {
@@ -18,6 +18,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body, h1, p, a {
+  font-family: inherit;
 }
 
 a {

@@ -35,7 +35,6 @@
 
 .Cong-btn-text {
     top: 48px;
-    font-family: Gilroy;
     font-size: 48px;
     font-weight: 800;
     color: #4609BD;
@@ -51,16 +50,13 @@
 }
 
 .Cong-title {
-    font-family: Gilroy;
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 800;
     color: #FFFFFF;
 }
 
 .Cong-text {
-
-    font-family: Gilroy;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 64px;
     line-height: 60px;
 
@@ -72,10 +68,8 @@
 
 .Cong-text2 {
     text-wrap: nowrap;
-
-    font-family: Gilroy;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     font-size: 64px;
     line-height: 60px;
 

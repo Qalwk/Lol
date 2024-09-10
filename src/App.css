@@ -19,6 +19,14 @@
   top: -33px;
 }
 
+.wheel-fix {
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .wheel-red {
   width: 100%;
   height: 100%;
@@ -80,7 +88,6 @@
 
 .text {
   text-wrap: nowrap; 
-  font-family: 'Lilita One';
   font-style: normal;
   font-weight: 800;
   top: 85px;
@@ -140,16 +147,17 @@
 
 @media  (min-width: 720px) and (max-width: 1440px) {
   .blue {
-    /* top: 600px; */
-    top: 54dvh;
+    top: 600px;
+    top: 65%;
     left: 45%; /*  Устанавливаем значение left на 50% */
     transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
-    scale: 85%;
+    scale: 100%;
   }
   .women {
-    top: 130px;
+    top: 40%;
     scale: 80%;
     left: 78%; /*  Устанавливаем значение left на 50% */
+    z-index: 7;
   }
   .cards {
     scale: 90%;
@@ -185,7 +193,7 @@
     display: none;
   }
   .women {
-    bottom: -40dvh;
+    bottom: -85dvh;
     scale: 65%;
     left: 60%; /*  Устанавливаем значение left на 50% */
   }
@@ -232,8 +240,7 @@
   .moneys {
   display: block;
   position: fixed;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 0%; /*  Устанавливаем значение left на 50% */
   bottom: 0;
   }
 }
