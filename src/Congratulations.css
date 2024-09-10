@@ -155,7 +155,7 @@
         font-weight: 600;
         font-size: 36px;
         line-height: 60px;
-        word-break: keep-all;
+        word-break: break-all;
     }
     .Cong-btn {
         /* height: 110px; */
@@ -175,9 +175,6 @@
         width: 300px;
         left: 50dvw; /*  Устанавливаем значение left на 50% */
         transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
-    }
-    .Cong-bg {
-
     }
     .Cong-cards {
         position: fixed;
