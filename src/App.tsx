@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Confeti from "/конфети.png"
 import WheelRed from "/Wheel-red.png"
 import WheelBtn from "/Wheel-btn.png"
 import WheelGold from "/Wheel-gold.png"
 import WheelWin from "/Wheel-win.png"
+import WheelWinCA from "/Wheel-winCA.png"
 import Cards from "/Cards.png"
 import Women from "/Women.png"
 import Blue from "/777.png"
@@ -55,8 +56,22 @@ function App() {
     }
   };
 
+  // fetch('https://ipapi.co/json/')
+  // .then(res => res.json())
+  // .then(data => {
+  //   if (data.country === 'CA') {
+  //     // Пользователь находится в Канаде
+  //     var country = "CA"
+  //   }
+  // })
+  // .catch(err => {
+  //   console.error('Ошибка при получении IP-адреса:', err);
+  // });
+
+  // return isCanada ? <div id="canada-element">Канада</div> : null;
 
   return (
+    
     <div className='main'>
       {isOpen === 1 ? (
         <div className=''>
@@ -89,7 +104,12 @@ function App() {
         <img className='wheel-red' src={WheelRed} alt="" />
         <img className='wheel-btn' src={WheelBtn} onClick={handleClick} alt="" />
         <img className='wheel-gold'src={WheelGold} alt="" />
-        <img className='wheel-win' src={WheelWin} alt="" />
+        <img className='wheel-win' src={WheelWinCA} alt="" />
+        {/* {(country === 'CA') ? (
+        <img className='wheel-win' src={WheelWinCA} alt="" />
+      ) 
+      : 
+      <img className='wheel-win' src={WheelWin} alt="" />} */}
       </div>
 
       <div className='cards'>
