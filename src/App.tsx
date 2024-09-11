@@ -60,33 +60,37 @@ function App() {
   // Language prefer settings
 
   const userLanguage = navigator.language;
-  let spinText, continueText, spinMoreText, congratsFirstText, congratsSecondText;
+  let spinText, continueText, spinMoreText, congratsFirstText, congratsSecondText, handleCl, handleCl2;
 
   if (userLanguage.startsWith('fr')) {
     spinText = "Tournez la roue de la fortune";
     continueText = "CONTINUER";
     spinMoreText = "TOURNER PLUS";
     congratsFirstText = "150 SPIN GRATUITS";
-    congratsSecondText = "2170 CAD + 150SG"
+    congratsSecondText = "2170 CAD + 150SG";
+    handleCl = "handleClick";
+    handleCl2 = "handleClick2"
   } else {
     spinText = "Spin the wheel of fortune";
     continueText = "CONTINUE";
     spinMoreText = "SPIN MORE";
     congratsFirstText = "150 FREE SPIN";
-    congratsSecondText = "2170 CAD + 150FS"
+    congratsSecondText = "2170 CAD + 150FS";
+    handleCl = "handleClick";
+    handleCl2 = "handleClick2"
   }
 
   return (
     <div className="main">
       {isOpen === 1 ? (
         <div className="pop-up_text">
-          <Congratulations text={congratsFirstText} actionButtonText={spinMoreText} />
+          <Congratulations text={congratsFirstText} actionButtonText={spinMoreText} handleCl={handleCl} />
         </div>
       ) : null}
 
       {isOpen === 2 ? (
         <div className="pop-up_text">
-          <Congratulations text={congratsSecondText} actionButtonText={continueText} />
+          <Congratulations text={congratsSecondText} actionButtonText={continueText} handleCl={handleCl2} />
         </div>
       ) : null}
 
