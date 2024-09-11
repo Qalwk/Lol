@@ -222,7 +222,7 @@
     line-height: 50px;
     width: 285px;
     text-wrap: wrap;
-    font-size: 48px;
+    font-size: 42px;
     text-align: center;
   }
   .Logo {
@@ -245,11 +245,17 @@
   bottom: 0;
   }
 
-  @media screen and (max-height: 750px) {
+  @media screen and (max-height: 650px) {
     .women {
       bottom: -30vh;
       scale: 60%;
       left: calc(100% - 224px);
+    }
+    .text {
+      text-wrap: wrap;
+      font-size: 36px;
+      line-height: normal;
+      margin-top: 10px;
     }
   }
 }
