@@ -100,15 +100,15 @@ function App() {
 
       <div className="wheel-fix">
         <div className="wheel">
-          <img className="wheel-red" src={WheelRed} alt="" />
+          <img className="wheel-red" src={WheelRed} alt="wheel-red" />
           <img
             className="wheel-btn"
             src={WheelBtn}
             onClick={handleClick}
-            alt=""
+            alt="wheel-btn"
           />
-          <img className="wheel-gold" src={WheelGold} alt="" />
-          <img className="wheel-win" src={WheelWinCA} alt="" />
+          <img className="wheel-gold" src={WheelGold} alt="wheel-gold" />
+          <img className="wheel-win" src={WheelWinCA} alt="wheel-win" />
         </div>
       </div>
 
@@ -116,7 +116,7 @@ function App() {
         <img className="" src={Cards} alt="blue" />
       </div>
       <div className="women">
-        <img className="" src={Women} alt="blue" />
+        <img className="women-image" src={Women} alt="blue" />
       </div>
       <div className="blue">
         <img className="" src={Blue} alt="blue" />
@@ -128,7 +128,7 @@ function App() {
         <img className="bg-img" src={BG} alt="bg" />
       </div>
       <div className="moneys">
-        <img src={Moneys} alt="" />
+        <img src={Moneys} alt="moneys" />
       </div>
     </div>
   );

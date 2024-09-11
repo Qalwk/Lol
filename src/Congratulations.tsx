@@ -30,6 +30,7 @@ const Congratulations: React.FC<TextProps> = ({ text, actionButtonText }) => {
   if (userLanguage.startsWith("fr")) {
     congratulationsText = "FÉLICITATIONS";
     youWinText = "TU GAGNES";
+    
   } else {
     congratulationsText = "CONGRATULATIONS";
     youWinText = "YOU WIN";

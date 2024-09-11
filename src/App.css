@@ -31,8 +31,10 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 5;
 }
 
@@ -40,19 +42,23 @@
   width: 90%;
   height: 90%;
   position: absolute;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 5;
   /* animation: spin 35s linear infinite; */
 }
 
-.wheel-gold {  
+.wheel-gold {
   width: 35%;
   height: 48%;
   top: 0;
   position: absolute;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 10;
 }
 
@@ -62,53 +68,76 @@
   position: absolute;
   z-index: 15;
   cursor: pointer;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
 }
 
 @keyframes spin {
-  0% { transform: translateX(-50%) rotate(0deg); }
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
   /* 50% { transform: translateX(-50%) rotate(300deg); } */
-  100% { transform: translateX(-50%) rotate(1800deg); }  /* Поворот на 1980 градусов в конце анимации */
+  100% {
+    transform: translateX(-50%) rotate(1800deg);
+  }
+
+  /* Поворот на 1980 градусов в конце анимации */
 }
 
 @keyframes spin2 {
-  0% { transform: translateX(-50%) rotate(0deg); }
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
   /* 50% { transform: translateX(-50%) rotate(300deg); } */
-  100% { transform: translateX(-50%) rotate(1980deg); }  /* Поворот на 1980 градусов в конце анимации */
+  100% {
+    transform: translateX(-50%) rotate(1980deg);
+  }
+
+  /* Поворот на 1980 градусов в конце анимации */
 }
 
 .Logo {
   top: 100px;
   position: fixed;
-  left: 15%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 15%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 5;
 }
 
 .text {
   font-family: "Lilita One", sans-serif;
-  text-wrap: nowrap; 
+  text-wrap: nowrap;
   font-style: normal;
   font-weight: 800;
   top: 85px;
   position: fixed;
   font-size: 64px;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   background: linear-gradient(90.21deg, #FFE62B 0.19%, #FF4C00 107.7%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
-  -webkit-text-stroke: 1px #D20E0E; /* Для Chrome, Safari и Opera */
+  -webkit-text-stroke: 1px #D20E0E;
+  /* Для Chrome, Safari и Opera */
 }
 
 .cards {
   top: 230px;
   position: fixed;
-  left: 40%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 40%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 0;
   animation: Table 4s ease-in-out infinite;
 }
@@ -116,8 +145,10 @@
 .women {
   top: 230px;
   position: fixed;
-  left: 75%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 75%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 5;
   pointer-events: none;
   animation: Women 4s ease-in-out infinite;
@@ -126,16 +157,20 @@
 .blue {
   top: 55dvh;
   position: fixed;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   z-index: 5;
   animation: Table 3s ease-in-out infinite;
 }
 
 .table {
   bottom: -30px;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   position: fixed;
   z-index: 10;
   background-size: cover;
@@ -146,103 +181,140 @@
   display: none;
 }
 
-@media  (min-width: 720px) and (max-width: 1440px) {
+@media (min-width: 720px) and (max-width: 1440px) {
   .blue {
     top: 600px;
     top: 65%;
-    left: 45%; /*  Устанавливаем значение left на 50% */
-    transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+    left: 45%;
+    /*  Устанавливаем значение left на 50% */
+    transform: translateX(-50%);
+    /*  Сдвигаем фон на половину своей ширины влево */
     scale: 100%;
   }
+
   .women {
     top: 40%;
     scale: 80%;
-    left: 78%; /*  Устанавливаем значение left на 50% */
+    left: 78%;
+    /*  Устанавливаем значение left на 50% */
     z-index: 7;
   }
+
   .cards {
     scale: 90%;
     top: 20vh;
-    left: 36%; /*  Устанавливаем значение left на 50% */
+    left: 36%;
+    /*  Устанавливаем значение left на 50% */
   }
+
   .table {
     right: -50%;
     bottom: -60px;
   }
+
   .bg {
     /* width: 100%;
     height: 100%; */
   }
+
   .text {
     font-size: 56px;
   }
+
   .Logo {
     top: 50px;
     scale: 80%;
   }
+
   .wheel {
     top: -10px;
   }
 }
 
-@media  screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {
   .wheel-btn {
     width: 25%;
     height: 25%;
   }
+
   .blue {
     display: none;
   }
+
   .women {
-    bottom: -100vh;
+    /* position: absolute; */
+    top: 45%;
+    /* top: 0; */
+    height: fit-content;
     scale: 65%;
-    left: calc(100% - 284px);
+    left: calc(100% - 160px);
   }
+/* 
+  .women-image {
+    width: 405px;
+    height: 447px;
+  } */
+
   .cards {
     display: none;
   }
+
   .table {
     width: 100%;
     scale: 80%;
     left: 0;
     bottom: -5dvh;
   }
+
   .bg-img {
     width: 1500px;
     height: 1080px;
     top: -50px;
-    left: 50%; /*  Устанавливаем значение left на 50% */
-    transform: translateX(-38%); /*  Сдвигаем фон на половину своей ширины влево */
-    background-size:cover;
+    left: 50%;
+    /*  Устанавливаем значение left на 50% */
+    transform: translateX(-38%);
+    /*  Сдвигаем фон на половину своей ширины влево */
+    background-size: cover;
   }
+
   .text {
     top: 12dvh;
-    left: 50%; /*  Устанавливаем значение left на 50% */
-    transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+    left: 50%;
+    /*  Устанавливаем значение left на 50% */
+    transform: translateX(-50%);
+    /*  Сдвигаем фон на половину своей ширины влево */
     line-height: 50px;
     width: 285px;
     text-wrap: wrap;
     font-size: 42px;
     text-align: center;
   }
+
   .Logo {
-    left: 37%; /*  Устанавливаем значение left на 50% */
-    transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+    left: 37%;
+    /*  Устанавливаем значение left на 50% */
+    transform: translateX(-50%);
+    /*  Сдвигаем фон на половину своей ширины влево */
     top: 40px;
     scale: 70%;
   }
+
   .wheel {
     width: 45dvh;
     height: 45dvh;
     top: 0px;
-    left: 50%; /*  Устанавливаем значение left на 50% */
-    transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+    left: 50%;
+    /*  Устанавливаем значение left на 50% */
+    transform: translateX(-50%);
+    /*  Сдвигаем фон на половину своей ширины влево */
   }
+
   .moneys {
-  display: block;
-  position: fixed;
-  left: 0%; /*  Устанавливаем значение left на 50% */
-  bottom: 0;
+    display: block;
+    position: fixed;
+    left: 0%;
+    /*  Устанавливаем значение left на 50% */
+    bottom: 0;
   }
 
   @media screen and (max-height: 650px) {
@@ -251,6 +323,7 @@
       scale: 60%;
       left: calc(100% - 224px);
     }
+
     .text {
       text-wrap: wrap;
       font-size: 36px;
@@ -265,8 +338,10 @@
   height: 100dvh;
 
   top: -50px;
-  left: 50%; /*  Устанавливаем значение left на 50% */
-  transform: translateX(-50%); /*  Сдвигаем фон на половину своей ширины влево */
+  left: 50%;
+  /*  Устанавливаем значение left на 50% */
+  transform: translateX(-50%);
+  /*  Сдвигаем фон на половину своей ширины влево */
   position: fixed;
   z-index: -10;
   background-size: cover;
@@ -275,7 +350,7 @@
 .Confeti {
   top: -50px;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   position: fixed;
   z-index: 20;
   background-size: cover;
@@ -284,21 +359,65 @@
 }
 
 @keyframes Table {
-  0% { transform: translateX(-50%) translateY(0); }  /* Начальное положение */
-  50% { transform: translateX(-50%) translateY(7px); } /* Сдвиг вниз */
-  100% { transform: translateX(-50%) translateY(0); } /* Возвращение в центр */
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Начальное положение */
+  50% {
+    transform: translateX(-50%) translateY(7px);
+  }
+
+  /* Сдвиг вниз */
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Возвращение в центр */
 }
 
 @keyframes Women {
-  0% { transform: translateX(-50%) translateY(0); }  /* Начальное положение */
-  50% { transform: translateX(-48%) translateY(10px) translateX(15px); } /* Сдвиг вниз */
-  100% { transform: translateX(-50%) translateY(0); } /* Возвращение в центр */
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Начальное положение */
+  50% {
+    transform: translateX(-48%) translateY(10px) translateX(15px);
+  }
+
+  /* Сдвиг вниз */
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Возвращение в центр */
 }
 
 @keyframes Confeti {
-  0% { transform: translateX(-50%) translateY(0); }  /* Начальное положение */
-  25% { transform: translateX(-50%) translateY(20px); } /* Сдвиг вверх */
-  50% { transform: translateX(-50%) translateY(0); }  /* Возвращение в центр */
-  75% { transform: translateX(-50%) translateY(-20px); } /* Сдвиг вниз */
-  100% { transform: translateX(-50%) translateY(0); } /* Возвращение в центр */
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Начальное положение */
+  25% {
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  /* Сдвиг вверх */
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Возвращение в центр */
+  75% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+
+  /* Сдвиг вниз */
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Возвращение в центр */
 }
