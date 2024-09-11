@@ -80,13 +80,13 @@ function App() {
     <div className="main">
       {isOpen === 1 ? (
         <div className="pop-up_text">
-          <Congratulations text={congratsFirstText} actionButtonText={continueText} />
+          <Congratulations text={congratsFirstText} actionButtonText={spinMoreText} />
         </div>
       ) : null}
 
       {isOpen === 2 ? (
         <div className="pop-up_text">
-          <Congratulations text={congratsSecondText} actionButtonText={spinMoreText} />
+          <Congratulations text={congratsSecondText} actionButtonText={continueText} />
         </div>
       ) : null}
 
