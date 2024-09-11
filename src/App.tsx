@@ -67,20 +67,20 @@ function App() {
         const ip = await response.text();
         console.log(ip);
         setUserIP(ip);
-        console.log(userIP);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 
     fetchIP();
 
-    async function fetchCountryCode() {
-      const res = await fetch(`http://ip-api.com/json/${userIP}`); // Поменяй IP-адрес тут или будет браться стандартный
-      const data = await res.json();
-      setCountryCode(data.countryCode);
-      console.log(data.countryCode);
-    }
+  async function fetchCountryCode() {
+    const res = await fetch(`https://ipapi.co/${userIP}/country/`);
+    const data = await res.text();
+    setCountryCode(data);
+    console.log(data);
+}
+
 
     fetchCountryCode();
   }, []);
