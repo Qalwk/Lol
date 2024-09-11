@@ -1,4 +1,4 @@
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Cards from "/Cards.png";
 import Money from "/Money.png";
 import Coin from "/Coin.png";
