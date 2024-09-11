@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Confeti from "/конфети.png";
 import WheelRed from "/Wheel-red.png";
 import WheelBtn from "/Wheel-btn.png";
 import WheelGold from "/Wheel-gold.png";
-import WheelWin from "/Wheel-win.png";
 import WheelWinCA from "/Wheel-winCA.png";
 import Cards from "/Cards.png";
 import Women from "/Women.png";
@@ -20,8 +19,6 @@ function App() {
   const [isStart, setStart] = useState(0);
   const [isOpen, setOpen] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
-  const [userIP, setUserIP] = useState("");
 
   const handleClick = () => {
     if (!isSpinning && isOpen == 0 && isStart < 2) {
@@ -60,46 +57,36 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    async function fetchIP() {
-      try {
-        const response = await fetch("https://api.ipify.org");
-        const ip = await response.text();
-        console.log(ip);
-        setUserIP(ip);
-      } catch (error) {
-        console.error(error);
-      }
-    }
+  // Language prefer settings
 
-    fetchIP();
+  const userLanguage = navigator.language;
+  let spinText, continueText, spinMoreText, congratsFirstText, congratsSecondText;
 
-  async function fetchCountryCode() {
-    const res = await fetch(`https://ipapi.co/${userIP}/country/`);
-    const data = await res.text();
-    setCountryCode(data);
-    console.log(data);
-}
-
-
-    fetchCountryCode();
-  }, []);
+  if (userLanguage.startsWith('fr')) {
+    spinText = "Tournez la roue de la fortune";
+    continueText = "CONTINUER";
+    spinMoreText = "TOURNER PLUS";
+    congratsFirstText = "150 SPIN GRATUITS";
+    congratsSecondText = "2170 CAD + 150SG"
+  } else {
+    spinText = "Spin the wheel of fortune";
+    continueText = "CONTINUE";
+    spinMoreText = "SPIN MORE";
+    congratsFirstText = "150 FREE SPIN";
+    congratsSecondText = "2170 CAD + 150FS"
+  }
 
   return (
     <div className="main">
       {isOpen === 1 ? (
         <div className="pop-up_text">
-          <Congratulations text="150 FREE SPIN" />
+          <Congratulations text={congratsFirstText} actionButtonText={continueText} />
         </div>
       ) : null}
 
       {isOpen === 2 ? (
         <div className="pop-up_text">
-          <Congratulations
-            text={
-              countryCode === "CA" ? "2170 CAD + 150FS" : "1500 EUR + 150FS"
-            }
-          />
+          <Congratulations text={congratsSecondText} actionButtonText={spinMoreText} />
         </div>
       ) : null}
 
@@ -109,7 +96,7 @@ function App() {
       <div className="Logo">
         <img className="" src={Logo} alt="blue" />
       </div>
-      <a className="text">Spin the whell of fortune</a>
+      <a className="text">{spinText}</a>
 
       <div className="wheel-fix">
         <div className="wheel">
@@ -121,11 +108,7 @@ function App() {
             alt=""
           />
           <img className="wheel-gold" src={WheelGold} alt="" />
-          {countryCode === "CA" ? (
-            <img className="wheel-win" src={WheelWinCA} alt="" />
-          ) : (
-            <img className="wheel-win" src={WheelWin} alt="" />
-          )}
+          <img className="wheel-win" src={WheelWinCA} alt="" />
         </div>
       </div>
 

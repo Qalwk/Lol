@@ -6,9 +6,10 @@ import "./Congratulations.css";
 
 interface TextProps {
   text: string; // Интерфейс с текстовым пропсом "message"
+  actionButtonText: string;
 }
 
-const Congratulations: React.FC<TextProps> = ({ text }) => {
+const Congratulations: React.FC<TextProps> = ({ text, actionButtonText }) => {
   const [isOpen, setOpen] = useState(0);
   const handleClick = () => {
     setOpen(isOpen + 1);
@@ -20,6 +21,19 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
       textElement.style.wordBreak = "keep-all";
     }
   }, []);
+
+  //Language prefer setings
+
+  const userLanguage = navigator.language;
+  let congratulationsText, youWinText;
+
+  if (userLanguage.startsWith("fr")) {
+    congratulationsText = "FÉLICITATIONS";
+    youWinText = "TU GAGNES";
+  } else {
+    congratulationsText = "CONGRATULATIONS";
+    youWinText = "YOU WIN";
+  }
 
   return (
     <div>
@@ -36,14 +50,14 @@ const Congratulations: React.FC<TextProps> = ({ text }) => {
               <img className="" src={Coin} alt="blue" />
             </div>
             <div className="Congratulations">
-              <span className="Cong-title">CONGRATULATIONS</span>
+              <span className="Cong-title">{congratulationsText}</span>
               <div className="Cong-win">
-                <span className="Cong-text">YOU WIN</span>
+                <span className="Cong-text">{youWinText}</span>
                 <span className="Cong-text2">{text}</span>
               </div>
               <button className="Cong-btn">
                 <span className="Cong-btn-text" onClick={handleClick}>
-                  CONTINUE
+                  {actionButtonText}
                 </span>
               </button>
             </div>
