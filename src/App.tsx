@@ -21,6 +21,7 @@ function App() {
   const [isOpen, setOpen] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [countryCode, setCountryCode] = useState("");
+  const [userIP, setUserIP] = useState("");
 
   const handleClick = () => {
     if (!isSpinning && isOpen == 0 && isStart < 2) {
@@ -60,10 +61,25 @@ function App() {
   };
 
   useEffect(() => {
+    async function fetchIP() {
+      try {
+        const response = await fetch("https://api.ipify.org");
+        const ip = await response.text();
+        console.log(ip);
+        setUserIP(ip);
+        console.log(userIP);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchIP();
+
     async function fetchCountryCode() {
-      const res = await fetch("http://ip-api.com/json/?fields=61439"); // Поменяй IP-адрес тут или будет браться стандартный
+      const res = await fetch(`http://ip-api.com/json/${userIP}`); // Поменяй IP-адрес тут или будет браться стандартный
       const data = await res.json();
       setCountryCode(data.countryCode);
+      console.log(data.countryCode);
     }
 
     fetchCountryCode();
