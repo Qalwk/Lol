@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Confeti from "/конфети.png";
 import WheelRed from "/Wheel-red.png";
@@ -16,9 +16,18 @@ import Moneys from "/Moneys.png";
 import "./App.css";
 
 function App() {
-  const [isStart, setStart] = useState(0);
+  const [isStart, setStart] = useState(() => {
+    // Загружаем состояние из локального хранилища
+    const savedState = localStorage.getItem('isStart');
+    return savedState ? JSON.parse(savedState) : 0; // Возвращаем 0, если нет сохраненного состояния
+  });
   const [isOpen, setOpen] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
+
+  useEffect(() => {
+    // Сохраняем состояние в локальном хранилище при изменении isStart
+    localStorage.setItem('isStart', JSON.stringify(isStart));
+  }, [isStart]);
 
   const handleClick = () => {
     if (!isSpinning && isOpen == 0 && isStart < 2) {
