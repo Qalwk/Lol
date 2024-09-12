@@ -40,6 +40,9 @@ const Congratulations: React.FC<TextProps> = ({ text, actionButtonText, handleCl
   if (userLanguage.startsWith("fr")) {
     congratulationsText = "FÉLICITATIONS";
     youWinText = "TU GAGNES";
+  } else if (userLanguage.startsWith('de')) {
+    congratulationsText = "HERZLICHEN GLÜCKWUNS";
+    youWinText = "SIE GEWINNEN";
   } else {
     congratulationsText = "CONGRATULATIONS";
     youWinText = "YOU WIN";

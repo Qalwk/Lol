@@ -4,7 +4,8 @@ import Confeti from "/конфети.png";
 import WheelRed from "/Wheel-red.png";
 import WheelBtn from "/Wheel-btn.png";
 import WheelGold from "/Wheel-gold.png";
-import WheelWinCA from "/Wheel-winCA.png";
+// import WheelWinCA from "/Wheel-winCA.png";
+import WheelWinCH from "/Wheel-winCH.png";
 import Cards from "/Cards.png";
 import Women from "/Women.png";
 import Blue from "/777.png";
@@ -76,15 +77,23 @@ function App() {
     continueText = "CONTINUER";
     spinMoreText = "TOURNER PLUS";
     congratsFirstText = "150 SPIN GRATUITS";
-    congratsSecondText = "2170 CAD + 150SG";
+    congratsSecondText = "1420 CHF + 150SG";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"
-  } else {
+  } else if (userLanguage.startsWith('de')) {
+    spinText = "Drehen Sie das Glücksrad";
+    continueText = "WEITERGEHEN";
+    spinMoreText = "SPIN MORE";
+    congratsFirstText = "150 FREISPIELE";
+    congratsSecondText = "1420 CHF + 150FS";
+    handleCl = "handleClick";
+    handleCl2 = "handleClick2"
+  } else  {
     spinText = "Spin the wheel of fortune";
     continueText = "CONTINUE";
     spinMoreText = "SPIN MORE";
     congratsFirstText = "150 FREE SPIN";
-    congratsSecondText = "2170 CAD + 150FS";
+    congratsSecondText = "1420 CHF + 150FS";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"
   }
@@ -121,7 +130,7 @@ function App() {
             alt="wheel-btn"
           />
           <img className="wheel-gold" src={WheelGold} alt="wheel-gold" />
-          <img className="wheel-win" src={WheelWinCA} alt="wheel-win" />
+          <img className="wheel-win" src={WheelWinCH} alt="wheel-win" />
         </div>
       </div>
 
