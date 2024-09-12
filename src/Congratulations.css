@@ -50,7 +50,7 @@
 }
 
 .Cong-title {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 800;
     color: #FFFFFF;
 }
@@ -59,7 +59,7 @@
     font-weight: 900;
     font-size: 64px;
     line-height: 60px;
-
+    text-wrap: nowrap;
     background: linear-gradient(90deg, #FFFF00 0%, #FFBE44 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -140,7 +140,7 @@
 
 @media  screen and (max-width: 720px) {
     .Cong-title {
-        font-size: 24px;
+        font-size: 22px;
         padding-left: -40px;
     }
     .Cong-win { 
