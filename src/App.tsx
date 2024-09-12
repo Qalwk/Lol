@@ -75,7 +75,7 @@ function App() {
   if (userLanguage.startsWith('fr')) {
     spinText = "Tournez la roue de la fortune";
     continueText = "CONTINUER";
-    spinMoreText = "TOURNER PLUS";
+    spinMoreText = "TOURNER ENCORE";
     congratsFirstText = "150 SPIN GRATUITS";
     congratsSecondText = "1420 CHF + 150SG";
     handleCl = "handleClick";
@@ -83,7 +83,7 @@ function App() {
   } else if (userLanguage.startsWith('de')) {
     spinText = "Drehen Sie das Glücksrad";
     continueText = "WEITERGEHEN";
-    spinMoreText = "SPIN MORE";
+    spinMoreText = "DREH WEITER";
     congratsFirstText = "150 FREISPIELE";
     congratsSecondText = "1420 CHF + 150FS";
     handleCl = "handleClick";
