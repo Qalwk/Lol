@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 
-import Confeti from "/конфети.png";
-import WheelRed from "/Wheel-red.png";
-import WheelBtn from "/Wheel-btn.png";
-import WheelGold from "/Wheel-gold.png";
 // import WheelWinCA from "/Wheel-winCA.png";
-import WheelWinCH from "/Wheel-winCH.png";
-import Cards from "/Cards.png";
-import Women from "/Women.png";
-import Blue from "/777.png";
-import Table from "/Red_table.png";
-import Logo from "/Logo.svg";
-import BG from "/BG.png";
+
+// import Confeti from "/конфети.png";
+// import WheelRed from "/Wheel-red.png";
+// import WheelBtn from "/Wheel-btn.png";
+// import WheelGold from "/Wheel-gold.png";
+// import WheelWinPL from "/WheelWinPL.png";
+// import Cards from "/Cards.png";
+// import Women from "/Women.png";
+// import Blue from "/777.png";
+// import Table from "/Red_table.png";
+// import Logo from "/Logo.svg";
+// import BG from "/BG.png";
+// import Moneys from "/Moneys.png";
+
 import Congratulations from "./Congratulations.tsx";
-import Moneys from "/Moneys.png";
 import "./App.css";
 
 function App() {
@@ -72,28 +74,45 @@ function App() {
   const userLanguage = navigator.language;
   let spinText, continueText, spinMoreText, congratsFirstText, congratsSecondText, handleCl, handleCl2;
 
-  if (userLanguage.startsWith('fr')) {
-    spinText = "Tournez la roue de la fortune";
-    continueText = "CONTINUER";
-    spinMoreText = "TOURNER ENCORE";
-    congratsFirstText = "150 SPIN GRATUITS";
-    congratsSecondText = "1420 CHF + 150SG";
+  if (userLanguage.startsWith('pl')) {
+    spinText = "Zakręć kołem fortuny";
+    continueText = "KONTYNUUJ";
+    spinMoreText = "SPINUJ WIĘCEJ";
+    congratsFirstText = "150 DARMOWY SPIN";
+    congratsSecondText = "1500 EUR + 150FS";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"
-  } else if (userLanguage.startsWith('de')) {
-    spinText = "Drehen Sie das Glücksrad";
-    continueText = "WEITERGEHEN";
-    spinMoreText = "DREH WEITER";
-    congratsFirstText = "150 FREISPIELE";
-    congratsSecondText = "1420 CHF + 150FS";
+  } else if (userLanguage.startsWith('ru')) {
+    spinText = "Вращайте колесо фортуны";
+    continueText = "ПРОДОЛЖИТЬ";
+    spinMoreText = "ВРАЩАТЬ ЕЩЕ";
+    congratsFirstText = "150 FREE SPINS";
+    congratsSecondText = "1500 EUR + 150FS";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"
-  } else  {
+  } else if (userLanguage.startsWith('es')) {
+    spinText = "Gira la rueda de la fortuna";
+    continueText = "CONTINÚE";
+    spinMoreText = "GIRAR MÁS";
+    congratsFirstText = "150 FREE SPINS";
+    congratsSecondText = "1500 EUR + 150FS";
+    handleCl = "handleClick";
+    handleCl2 = "handleClick2"
+  } else if (userLanguage.startsWith('pt')) {
+    spinText = "Girar a roda da fortuna";
+    continueText = "CONTINUAR";
+    spinMoreText = "GIRAR MAIS";
+    congratsFirstText = "150 FREE SPINS";
+    congratsSecondText = "1500 EUR + 150FS";
+    handleCl = "handleClick";
+    handleCl2 = "handleClick2"
+  } 
+  else  {
     spinText = "Spin the wheel of fortune";
     continueText = "CONTINUE";
     spinMoreText = "SPIN MORE";
-    congratsFirstText = "150 FREE SPIN";
-    congratsSecondText = "1420 CHF + 150FS";
+    congratsFirstText = "150 FREE SPINS";
+    congratsSecondText = "1500 EUR + 150FS";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"
   }
@@ -101,7 +120,7 @@ function App() {
   return (
     <div className="main">
       {isOpen === 1 ? (
-        <div className="pop-up_text">
+        <div className="pop-up_text" onClick={handleClick}>
           <Congratulations text={congratsFirstText} actionButtonText={spinMoreText} handleCl={handleCl} />
         </div>
       ) : null}
@@ -113,44 +132,44 @@ function App() {
       ) : null}
 
       <div className="Confeti">
-        <img className="" src={Confeti} alt="blue" />
+        <img className="" src="конфети.png" alt="blue" />
       </div>
       <div className="Logo">
-        <img className="" src={Logo} alt="blue" />
+        <img className="" src="Logo.svg" alt="blue" />
       </div>
       <a className="text">{spinText}</a>
 
       <div className="wheel-fix">
         <div className="wheel">
-          <img className="wheel-red" src={WheelRed} alt="wheel-red" />
+          <img className="wheel-red" src="Wheel-red.png" alt="wheel-red" />
           <img
             className="wheel-btn"
-            src={WheelBtn}
+            src="Wheel-btn.png"
             onClick={handleClick}
             alt="wheel-btn"
           />
-          <img className="wheel-gold" src={WheelGold} alt="wheel-gold" />
-          <img className="wheel-win" src={WheelWinCH} alt="wheel-win" />
+          <img className="wheel-gold" src="Wheel-gold.png" alt="wheel-gold" />
+          <img className="wheel-win" src="Wheel-win.png" alt="wheel-win" />
         </div>
       </div>
 
       <div className="cards">
-        <img className="" src={Cards} alt="blue" />
+        <img className="" src="Cards.png" alt="blue" />
       </div>
       <div className="women">
-        <img className="women-image" src={Women} alt="blue" />
+        <img className="women-image" src="Women.png" alt="blue" />
       </div>
       <div className="blue">
-        <img className="" src={Blue} alt="blue" />
+        <img className="" src="777.png" alt="blue" />
       </div>
       <div className="table">
-        <img className="" src={Table} alt="table" />
+        <img className="" src="Red_table.png" alt="table" />
       </div>
       <div className="bg">
-        <img className="bg-img" src={BG} alt="bg" />
+        <img className="bg-img" src="BG.png" alt="bg" />
       </div>
       <div className="moneys">
-        <img src={Moneys} alt="moneys" />
+        <img src="Moneys.png" alt="moneys" />
       </div>
     </div>
   );
