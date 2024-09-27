@@ -57,6 +57,7 @@
 }
 
 .Cong-text {
+    text-wrap: nowrap;
     font-weight: 900;
     font-size: 64px;
     line-height: 60px;
@@ -148,11 +149,13 @@
         top: 80px;
     }
     .Cong-text {
+        text-wrap: nowrap;
         font-weight: 900;
         font-size: 36px;
         line-height: 30px;
     }
     .Cong-text2 {
+        text-wrap: nowrap;
         font-weight: 900;
         font-size: 36px;
         line-height: 60px;

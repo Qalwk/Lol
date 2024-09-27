@@ -278,7 +278,7 @@
   }
 
   .text {
-    top: 10dvh;
+    top: 12dvh;
     left: 50%;
     /*  Устанавливаем значение left на 50% */
     transform: translateX(-50%);
@@ -302,7 +302,7 @@
   .wheel {
     width: 45dvh;
     height: 45dvh;
-    top: 0px;
+    top: 30px;
     left: 50%;
     /*  Устанавливаем значение left на 50% */
     transform: translateX(-50%);
@@ -330,6 +330,12 @@
       line-height: normal;
       margin-top: 10px;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) { 
+  .women {
+    left: calc(100% - 254px); /* Сдвиг на 30px левее */
   }
 }
 
