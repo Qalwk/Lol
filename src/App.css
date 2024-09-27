@@ -335,7 +335,7 @@
 
 @media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) { 
   .women {
-    left: calc(100% - 254px); /* Сдвиг на 30px левее */
+    left: calc(100% - 294px); /* Сдвиг на 30px левее */
   }
 }
 
