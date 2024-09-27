@@ -78,7 +78,7 @@ function App() {
     spinText = "Zakręć kołem fortuny";
     continueText = "KONTYNUUJ";
     spinMoreText = "SPINUJ WIĘCEJ";
-    congratsFirstText = "150 DARMOWY SPIN";
+    congratsFirstText = "150 FREE SPINS";
     congratsSecondText = "1500 EUR + 150FS";
     handleCl = "handleClick";
     handleCl2 = "handleClick2"

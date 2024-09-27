@@ -278,12 +278,12 @@
   }
 
   .text {
-    top: 12dvh;
+    top: 10dvh;
     left: 50%;
     /*  Устанавливаем значение left на 50% */
     transform: translateX(-50%);
     /*  Сдвигаем фон на половину своей ширины влево */
-    line-height: 50px;
+    line-height: 44px;
     width: 285px;
     text-wrap: wrap;
     font-size: 42px;

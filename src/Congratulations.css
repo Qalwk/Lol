@@ -34,6 +34,7 @@
 }
 
 .Cong-btn-text {
+    text-wrap: nowrap;
     top: 48px;
     font-size: 48px;
     font-weight: 800;
@@ -50,7 +51,7 @@
 }
 
 .Cong-title {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 800;
     color: #FFFFFF;
 }
@@ -59,7 +60,7 @@
     font-weight: 900;
     font-size: 64px;
     line-height: 60px;
-    text-wrap: nowrap;
+
     background: linear-gradient(90deg, #FFFF00 0%, #FFBE44 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -140,7 +141,7 @@
 
 @media  screen and (max-width: 720px) {
     .Cong-title {
-        font-size: 22px;
+        font-size: 24px;
         padding-left: -40px;
     }
     .Cong-win { 
@@ -164,6 +165,7 @@
         top: 170px;
     }
     .Cong-btn-text {
+        text-wrap: nowrap;
         font-weight: 900;
         font-size: 32px;
         line-height: 30px;

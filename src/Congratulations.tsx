@@ -50,6 +50,24 @@ const Congratulations: React.FC<TextProps> = ({ text, actionButtonText, handleCl
     youWinText = "YOU WIN";
   }
 
+  if (userLanguage.startsWith('pl')) {
+    congratulationsText = "GRATULACJE!";
+    youWinText = "WYGRAŁEŚ";
+  } else if (userLanguage.startsWith('ru')) {
+    congratulationsText = "ПОЗДРАВЛЯЕМ!";
+    youWinText = "ТЫ ВЫЙГРАЛ";
+  } else if (userLanguage.startsWith('es')) {
+    congratulationsText = "ENHORABUENA!";
+    youWinText = "GANAS";
+  } else if (userLanguage.startsWith('pt')) { 
+    congratulationsText = "PARABÉNS!";
+    youWinText = "Você ganhou";
+  } 
+  else  {
+    congratulationsText = "CONGRATULATIONS!";
+    youWinText = "YOU WIN";
+  }
+
   return (
     <div>
       {isOpen === 0 ? (
